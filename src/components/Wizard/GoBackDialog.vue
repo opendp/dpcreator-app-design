@@ -10,15 +10,12 @@
         >mdi-close</v-icon
       >
       <v-card-title>
-        <h2 class="title-size-2 mb-5">Are you sure you want to proceed?</h2>
+        <h2 class="title-size-2 mb-5 font-weight-bold">Are you sure?</h2>
       </v-card-title>
-
       <v-card-text class="text--primary">
-        Changing the epsilon or delta values will
-        <strong>directly impact the privacy settings. </strong>We recommend
-        using the default values provided by the system.
+        If you move to the previous step, you will lose all the changes made on
+        this page.
       </v-card-text>
-
       <v-card-actions>
         <Button
           color="primary"
@@ -26,7 +23,6 @@
           :click="() => $emit('confirm')"
           label="Yes"
         />
-
         <Button
           color="primary"
           outlined
@@ -40,10 +36,10 @@
 </template>
 
 <script>
-import Button from "../../../DesignSystem/Button.vue";
+import Button from "../DesignSystem/Button.vue";
 export default {
+  name: "GoBackDialog",
   components: { Button },
-  name: "EditNoiseParamsConfirmationDialog",
   props: ["dialog"]
 };
 </script>

@@ -1,6 +1,10 @@
 <template>
-  <div class="forgot-your-password mt-16">
-    <v-container>
+  <div class="forgot-your-password">
+    <v-container
+      :class="{
+        'px-10 mt-5': $vuetify.breakpoint.xsOnly
+      }"
+    >
       <ForgotPasswordForm
         :submitted.sync="forgotPasswordFormSubmitted"
         v-if="!forgotPasswordFormSubmitted"

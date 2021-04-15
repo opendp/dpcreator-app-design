@@ -5,7 +5,6 @@
       aria-valuemin="0"
       aria-valuemax="100"
       class="v-progress-linear theme--light"
-      style="height: 20px;"
     >
       <div
         class="v-progress-linear__background grey lighten-1"
@@ -37,6 +36,7 @@
 
 .v-progress-linear {
   border-radius: 50px;
+  height: 20px;
 }
 </style>
 
